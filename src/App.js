@@ -22,7 +22,7 @@ function App() {
         </button>
       </div>
       <div id="cardsList">
-        {getData.flat(1).map((val) => (
+        {Array.isArray(getData) && getData.flat(1).map((val) => (
           <div id="card">
             <p>Symbol: {val.symbol}</p>
             <p>High: {val.high}</p>
@@ -33,6 +33,17 @@ function App() {
             <p>Updated At: {val.updatedAt}</p>
           </div>
         ))}
+        {!Array.isArray(getData) && 
+          <div id="card">
+            <p>Symbol: {getData.symbol}</p>
+            <p>High: {getData.high}</p>
+            <p>Low: {getData.low}</p>
+            <p>Volume: {getData.volume}</p>
+            <p>Quote Volume: {getData.quoteVolume}</p>
+            <p>Percent Change: {getData.percentChange}</p>
+            <p>Updated At: {getData.updatedAt}</p>
+          </div>
+        }
       </div>
 
       <footer></footer>

@@ -15,8 +15,7 @@ const getSlice = createSlice({
   initialState,
   reducers: {
     fetchProducts(state, action) {
-      console.log(state, action);
-      state.push(action.payload);
+      return (action.payload);
     },
   },
 });
