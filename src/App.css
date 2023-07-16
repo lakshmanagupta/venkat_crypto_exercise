@@ -12,7 +12,16 @@
     animation: App-logo-spin infinite 20s linear;
   }
 }
-
+html {
+  height: 100vh;
+  background: rgb(2, 0, 36);
+  background: linear-gradient(
+    90deg,
+    rgba(2, 0, 36, 1) 4%,
+    rgba(42, 121, 9, 1) 100%,
+    rgba(38, 255, 0, 1) 100%
+  );
+}
 .App-header {
   background-color: #282c34;
   /* min-height: 100vh; */
@@ -39,10 +48,39 @@
 #searchDiv {
   display: flex;
   padding: 10px;
+  height: 12vh;
 }
 #searchInput {
   flex: 2;
+  border-radius: 2vw;
 }
 #searchButton {
   flex: 1;
+  background: rgb(238, 174, 202);
+  background: radial-gradient(
+    circle,
+    rgba(238, 174, 202, 1) 0%,
+    rgba(148, 187, 233, 1) 50%
+  );
+  border-radius: 2vw;
+}
+
+#cardsList {
+  display: flex;
+  flex-wrap: wrap;
+}
+#card {
+  margin: 1vw;
+  background: rgb(174, 179, 238);
+  background: radial-gradient(
+    circle,
+    rgba(174, 179, 238, 1) 0%,
+    rgba(201, 204, 207, 1) 93%
+  );
+  border-radius: 1vw;
+}
+#card > p {
+  text-align: left;
+  padding-left: 5vw;
+  padding-right: 1vw;
 }
